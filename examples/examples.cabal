@@ -39,6 +39,16 @@ executable static-xor-mlp
                      , mtl
                      , reflection
 
+executable static-fashion-cnn
+  import:              config
+  hs-source-dirs:      static-fashion-cnn
+  main-is:             Main.hs
+  ghc-options:         -fno-warn-partial-type-signatures
+  build-depends:       libtorch-ffi
+                     , random >= 1.1
+                     , safe-exceptions
+                     , static-mnist
+
 library static-mnist
   import:              config
   hs-source-dirs:      static-mnist
